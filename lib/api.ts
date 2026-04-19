@@ -172,6 +172,32 @@ export async function getHomeFeed(): Promise<ProviderResult<HomeFeed>> {
 }
 
 // ---------------------------------------------------------------------------
+// getTopAiringAnime — popular airing anime
+// ---------------------------------------------------------------------------
+
+export async function getTopAiringAnime(): Promise<ProviderResult<AnimeSummary[]>> {
+  try {
+    const d = await cached("home:jikan:top_airing", 15 * 60_000, () =>
+      fetchJikan<{ data: any[] }>("/top/anime?filter=airing&limit=12")
+    );
+
+    const data = Array.isArray(d.data) ? d.data : [];
+    const results = data.map(normalizeJikanAnime);
+
+    return {
+      provider: PROVIDER_META,
+      data: results,
+    };
+  } catch (e) {
+    console.warn("[api] Jikan top airing failed:", (e as Error).message);
+    return {
+      provider: PROVIDER_META,
+      data: [],
+    };
+  }
+}
+
+// ---------------------------------------------------------------------------
 // searchAnime
 // ---------------------------------------------------------------------------
 

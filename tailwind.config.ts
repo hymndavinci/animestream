@@ -34,10 +34,10 @@ const config: Config = {
       },
       backgroundImage: {
         "hero-grid":
-          "radial-gradient(circle at top, rgba(244,114,182,0.18), transparent 30%), radial-gradient(circle at 20% 20%, rgba(56,189,248,0.12), transparent 24%), linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 45%)"
+          "radial-gradient(circle at top, rgba(59,130,246,0.15), transparent 30%), linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 45%)"
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(244,114,182,0.1), 0 20px 60px -24px rgba(56,189,248,0.45)"
+        glow: "0 0 0 1px rgba(59,130,246,0.15), 0 20px 60px -24px rgba(59,130,246,0.4)"
       }
     }
   },
