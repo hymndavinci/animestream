@@ -293,6 +293,10 @@ export async function getWatchPayload(
   // Streaming links: provide embed URLs as "links" with isEmbed flag
   const streamingLinks: StreamingLink[] = [
     { url: embedUrl, quality: "2embed", isM3U8: false, isEmbed: true },
+    { url: `https://vidsrc.to/embed/anime/${effectiveMalId}/${episodeNumber}`, quality: "vidsrc.to", isM3U8: false, isEmbed: true },
+    { url: `https://vidsrc.me/embed/anime/${effectiveMalId}/${episodeNumber}`, quality: "vidsrc.me", isM3U8: false, isEmbed: true },
+    { url: `https://vidsrc.xyz/embed/anime/${effectiveMalId}/${episodeNumber}`, quality: "vidsrc.xyz", isM3U8: false, isEmbed: true },
+    { url: `https://embed.su/embed/anime/${effectiveMalId}/${episodeNumber}`, quality: "embed.su", isM3U8: false, isEmbed: true },
     { url: fallbackEmbedUrl, quality: "Miruro", isM3U8: false, isEmbed: true },
   ];
 
