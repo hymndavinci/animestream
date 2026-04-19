@@ -56,7 +56,7 @@ export default async function SearchPage({
     return (
       <main className="page-shell space-y-8">
         <section className="space-y-4 rounded-3xl border border-red-900/20 bg-red-900/10 p-8">
-          <Badge variant="destructive" className="bg-red-600/20 text-red-400">Search Unavailable</Badge>
+          <Badge variant="secondary" className="bg-red-600/20 text-red-400">Search Unavailable</Badge>
           <SectionHeader
             eyebrow="Error"
             title={`Search is temporarily unavailable for "${query}"`}
