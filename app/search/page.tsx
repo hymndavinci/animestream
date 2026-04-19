@@ -49,7 +49,7 @@ export default async function SearchPage({
           ))}
         </section>
 
-        <Pagination currentPage={data.currentPage} totalPages={data.totalPages} query={query} />
+        <Pagination currentPage={data.currentPage ?? 1} totalPages={data.totalPages ?? 1} query={query} />
       </main>
     );
   } catch (error) {
